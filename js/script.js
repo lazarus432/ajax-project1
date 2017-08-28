@@ -34,7 +34,10 @@ function loadData() {
           '<a href ="' + article.web_url + '">' + ' ' + article.headline.main + '</a>'
           + '<p>' + article.snippet + '</p>' + '</li>');
       };
-    })
+
+    }).error(function(e){
+      $nytHeaderElem.text('New York Times Articles Could Not Be Displayed');
+    });
 
     return false;
 };
